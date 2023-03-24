@@ -38,7 +38,7 @@ export default function ActivityList({activities, submitting, selectActivity, de
                                     floated='right'
                                     content='Delete'
                                     color='red' 
-                                    />
+                                />
                                 <Label basic content={activity.category} />
                             </Item.Extra>
                         </Item.Content>   
