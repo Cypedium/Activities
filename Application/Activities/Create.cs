@@ -1,32 +1,44 @@
+using Application.Core;
 using Domain;
+using FluentValidation;
 using MediatR;
 using Persistence;
 
 namespace Application.Activities
 {
-    public class Create
+  public class Create
+  {
+    public class Command : IRequest<Result<Unit>>
     {
-      public class Command : IRequest
-      {
         public Activity Activity { get; set; }
+    }
+
+    public class CommandValidator : AbstractValidator<Command>
+    {
+      public CommandValidator()
+      {
+          RuleFor(x => x.Activity).SetValidator(new ActivityValidator());
+      }
+    }
+
+    public class Handler : IRequestHandler<Command, Result<Unit>>
+    {
+      private readonly DataContext _context;
+      public Handler(DataContext context) //Inject so we can persist our changes
+      {
+          _context = context;
       }
 
-        public class Handler : IRequestHandler<Command>
-        {
-        private readonly DataContext _context;
-            public Handler(DataContext context) //Inject so we can persist our changes
-            {
-                _context = context;
-            }
+      public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+      {
+          _context.Activities.Add(request.Activity);
 
-            public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
-            {
-                _context.Activities.Add(request.Activity);
+          var result = await _context.SaveChangesAsync() > 0;
 
-                await _context.SaveChangesAsync();
+          if(!result) return Result<Unit>.Failure("Failed to create activity");
 
-                return Unit.Value; //No error on Task<Unit> with this row. Return nothing.
-            }
-        }
+          return Result<Unit>.Success(Unit.Value); //Unit.Value is empty but return Success
+      }
     }
+  }
 }
