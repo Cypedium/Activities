@@ -1,5 +1,6 @@
 using API.Extensions;
 using API.Middleware;
+using API.SingnalR;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -36,6 +37,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHub<ChatHub>("/chat");
 
 using var scope = app.Services.CreateScope(); //This will be removed when we not are running with "using"
 var services = scope.ServiceProvider;
