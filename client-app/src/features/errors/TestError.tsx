@@ -5,8 +5,6 @@ import ValidationError from './ValidationError';
 
 export default function TestErrors() {
     const baseUrl = process.env.REACT_APP_API_URL;
-    console.log(process.env.REACT_APP_API_URL);
-    console.log(process.env.REACT_APP_CHAT_URL);
     const [errors, setErrors] = useState(null);
 
     function handleNotFound() {
