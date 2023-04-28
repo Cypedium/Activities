@@ -12,7 +12,7 @@ COPY "Infrastructure/Infrastructure.csproj" "Infrastructure/Infrastructure.cspro
 
 RUN dotnet restore "Reactivities.sln"
 
-# copy everything else build
+# copy everything else and build
 
 COPY . .
 WORKDIR /app
