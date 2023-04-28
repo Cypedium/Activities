@@ -21,6 +21,12 @@ namespace API.Extensions
             services.AddSwaggerGen();
             services.AddDbContext<DataContext>(options =>
             {
+                var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");         
+                // Use connection string from file.           
+                options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+            });
+            /*services.AddDbContext<DataContext>(options =>
+            {
                 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
                 string connStr;
@@ -30,14 +36,14 @@ namespace API.Extensions
                 if (env == "Development")
                 {
                     // Use connection string from file.
-                        connStr = config.GetConnectionString("DefaultConnection");
+                    connStr = config.GetConnectionString("DefaultConnection");
                 }
                 else
                 {
-                //     // Use connection string provided at runtime by Flyio.
+                    // Use connection string provided at runtime by Flyio.
                     var connUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
-                //     // Parse connection URL to connection string for Npgsql
+                    // Parse connection URL to connection string for Npgsql
                     connUrl = connUrl.Replace("postgres://", string.Empty);
                     var pgUserPass = connUrl.Split("@")[0];
                     var pgHostPortDb = connUrl.Split("@")[1];
@@ -54,7 +60,7 @@ namespace API.Extensions
                 // Whether the connection string came from the local development configuration file
                 // or from the environment variable from FlyIO, use it to set up your DbContext.
                 options.UseNpgsql(connStr);
-            });
+            });*/
             services.AddCors(opt =>
             {
                 opt.AddPolicy("CorsPolicy", policy =>
