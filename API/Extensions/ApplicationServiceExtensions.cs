@@ -21,12 +21,12 @@ namespace API.Extensions
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
             
-            /* services.AddDbContext<DataContext>(options =>
+            services.AddDbContext<DataContext>(options =>
             {
                 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");         
                 // Use connection string from file.           
                 options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
-            }); */
+            });
             
             services.AddDbContext<DataContext>(options =>
             {
