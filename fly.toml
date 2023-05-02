@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for reactivities-project on 2023-04-28T16:01:10+02:00
+# fly.toml app configuration file generated for reactivitiez on 2023-05-02T09:18:01+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "reactivities-project"
+app = "reactivitiez"
 primary_region = "arn"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
@@ -12,7 +12,7 @@ kill_timeout = "5s"
   auto_rollback = true
 
 [build]
-  image = "mikaelaurell/reactivities-project:latest"
+  image = "mikaelaurell/reactivities:latest"
 
 [env]
   ASPNETCORE_URLS = "http://+:8080"
