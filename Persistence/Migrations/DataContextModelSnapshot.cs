@@ -59,15 +59,15 @@ namespace Persistence.Migrations
                     b.Property<string>("AppUserId")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ActvityId")
+                    b.Property<Guid>("ActivityId")
                         .HasColumnType("uuid");
 
                     b.Property<bool>("IsHost")
                         .HasColumnType("boolean");
 
-                    b.HasKey("AppUserId", "ActvityId");
+                    b.HasKey("AppUserId", "ActivityId");
 
-                    b.HasIndex("ActvityId");
+                    b.HasIndex("ActivityId");
 
                     b.ToTable("ActivityAttendees");
                 });
@@ -343,7 +343,7 @@ namespace Persistence.Migrations
                 {
                     b.HasOne("Domain.Activity", "Activity")
                         .WithMany("Attendees")
-                        .HasForeignKey("ActvityId")
+                        .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

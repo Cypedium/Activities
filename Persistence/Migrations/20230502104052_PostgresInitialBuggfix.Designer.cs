@@ -12,8 +12,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230427102549_PostgresInitial")]
-    partial class PostgresInitial
+    [Migration("20230502104052_PostgresInitialBuggfix")]
+    partial class PostgresInitialBuggfix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,15 +62,15 @@ namespace Persistence.Migrations
                     b.Property<string>("AppUserId")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ActvityId")
+                    b.Property<Guid>("ActivityId")
                         .HasColumnType("uuid");
 
                     b.Property<bool>("IsHost")
                         .HasColumnType("boolean");
 
-                    b.HasKey("AppUserId", "ActvityId");
+                    b.HasKey("AppUserId", "ActivityId");
 
-                    b.HasIndex("ActvityId");
+                    b.HasIndex("ActivityId");
 
                     b.ToTable("ActivityAttendees");
                 });
@@ -346,7 +346,7 @@ namespace Persistence.Migrations
                 {
                     b.HasOne("Domain.Activity", "Activity")
                         .WithMany("Attendees")
-                        .HasForeignKey("ActvityId")
+                        .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

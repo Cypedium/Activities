@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class PostgresInitial : Migration
+    public partial class PostgresInitialBuggfix : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -97,15 +97,15 @@ namespace Persistence.Migrations
                 columns: table => new
                 {
                     AppUserId = table.Column<string>(type: "text", nullable: false),
-                    ActvityId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ActivityId = table.Column<Guid>(type: "uuid", nullable: false),
                     IsHost = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ActivityAttendees", x => new { x.AppUserId, x.ActvityId });
+                    table.PrimaryKey("PK_ActivityAttendees", x => new { x.AppUserId, x.ActivityId });
                     table.ForeignKey(
-                        name: "FK_ActivityAttendees_Activities_ActvityId",
-                        column: x => x.ActvityId,
+                        name: "FK_ActivityAttendees_Activities_ActivityId",
+                        column: x => x.ActivityId,
                         principalTable: "Activities",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -273,9 +273,9 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ActivityAttendees_ActvityId",
+                name: "IX_ActivityAttendees_ActivityId",
                 table: "ActivityAttendees",
-                column: "ActvityId");
+                column: "ActivityId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
