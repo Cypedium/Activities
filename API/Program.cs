@@ -58,7 +58,7 @@ app.UseCors("CorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseDefaultFiles();
+app.UseDefaultFiles(); //looks in wwwroot and search for indexfiles
 app.UseStaticFiles();
 
 
@@ -66,7 +66,7 @@ app.MapControllers();
 app.MapHub<ChatHub>("/chat");
 app.MapFallbackToController("Index", "Fallback");
 
-using var scope = app.Services.CreateScope(); //This will be removed when we not are running with "using"
+using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 
 try

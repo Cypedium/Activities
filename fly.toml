@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for reactivities-project-ver3 on 2023-05-02T13:43:27+02:00
+# fly.toml app configuration file generated for reactivities-project-ver5 on 2023-05-02T16:09:35+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "reactivities-project-ver3"
+app = "reactivities-project-ver5"
 primary_region = "arn"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
