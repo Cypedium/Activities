@@ -14,20 +14,12 @@ namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services, 
+            IConfiguration config)
         {
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
-            
-            services.AddDbContext<DataContext>(options =>
-            {
-                var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");         
-                // Use connection string from file.           
-                options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
-            });
-            
+            services.AddSwaggerGen();  
             services.AddDbContext<DataContext>(options =>
             {
                 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -44,8 +36,7 @@ namespace API.Extensions
                 else
                 {
                     // Use connection string provided at runtime by Flyio.
-                    var connUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-                    Trace.WriteLine(connUrl);                
+                    var connUrl = Environment.GetEnvironmentVariable("DATABASE_URL");            
 
                     // Parse connection URL to connection string for Npgsql
                     connUrl = connUrl.Replace("postgres://", string.Empty);
