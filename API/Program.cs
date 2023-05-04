@@ -61,7 +61,6 @@ app.UseAuthorization();
 app.UseDefaultFiles(); //looks in wwwroot and search for indexfiles
 app.UseStaticFiles();
 
-
 app.MapControllers();
 app.MapHub<ChatHub>("/chat");
 app.MapFallbackToController("Index", "Fallback");
