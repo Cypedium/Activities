@@ -2,6 +2,7 @@ import { Profile } from "./profile";
 
 export interface Activity {
     id: string;
+    isPrivate: boolean;
     title: string;
     date: Date | null;
     description: string;
@@ -9,7 +10,6 @@ export interface Activity {
     city: string;
     venue: string;
     hostUsername: string;
-    isPrivate: boolean;
     isCancelled: boolean;
     isGoing: boolean;
     isHost: boolean;
