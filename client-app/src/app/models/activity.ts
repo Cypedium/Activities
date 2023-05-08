@@ -9,6 +9,7 @@ export interface Activity {
     city: string;
     venue: string;
     hostUsername: string;
+    isPrivate: boolean;
     isCancelled: boolean;
     isGoing: boolean;
     isHost: boolean;
@@ -24,16 +25,18 @@ export interface Activity {
 
   export class ActivityFormValues {
     id?: string = undefined;
+    isPrivate: boolean = false;
     title: string = '';
     date: Date | null = null;
     description: string = '';
     category: string = '';
     city: string = '';
-    venue: string = '';
+    venue: string = '';    
 
     constructor(activity?: ActivityFormValues) {
       if (activity) {
         this.id = activity.id;
+        this.isPrivate = activity.isPrivate;
         this.title = activity.title;
         this.date = activity.date;
         this.description = activity.description;

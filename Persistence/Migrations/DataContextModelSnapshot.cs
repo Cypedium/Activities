@@ -49,6 +49,9 @@ namespace Persistence.Migrations
                     b.Property<string>("Venue")
                         .HasColumnType("text");
 
+                    b.Property<bool>("isPrivate")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.ToTable("Activities");
@@ -63,6 +66,9 @@ namespace Persistence.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<bool>("IsHost")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("isPrivate")
                         .HasColumnType("boolean");
 
                     b.HasKey("AppUserId", "ActivityId");
