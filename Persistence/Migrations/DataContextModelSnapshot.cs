@@ -43,6 +43,9 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsCancelled")
                         .HasColumnType("boolean");
 
+                    b.Property<bool>("IsPrivate")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
@@ -63,6 +66,9 @@ namespace Persistence.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<bool>("IsHost")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsPrivate")
                         .HasColumnType("boolean");
 
                     b.HasKey("AppUserId", "ActivityId");
