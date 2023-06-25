@@ -10,7 +10,7 @@ interface Props {
 
 export default function ActivityListItem({activity}: Props) {
     return (
-        !activity.isPrivate || activity.isPrivate && activity.host?.following ? ( 
+        !activity.isPrivate || activity.isPrivate && (activity.host?.following || activity.isHost) ? ( 
             <Segment.Group> 
                 <Segment>
                     {activity.isCancelled &&

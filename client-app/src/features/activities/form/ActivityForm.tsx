@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React, {useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button, FormCheckbox, Header, Segment } from 'semantic-ui-react';
+import { Button, Header, Segment } from 'semantic-ui-react';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 import { ActivityFormValues } from '../../../app/models/activity';
 import { useStore } from '../../../app/stores/store';
@@ -13,6 +13,7 @@ import MyTextArea from '../../../app/common/form/MyTextArea';
 import MySelectInput from '../../../app/common/form/MySelectInput';
 import { categoryOptions } from '../../../app/common/options/categoryOptions';
 import MyDateInput from '../../../app/common/form/MyDateInput';
+import MyCheckboxInput from '../../../app/common/form/MyCheckboxInput';
 
 export default observer(function ActivityForm() {
     const { activityStore } = useStore();
@@ -58,7 +59,11 @@ export default observer(function ActivityForm() {
                 {({ handleSubmit, isValid, isSubmitting, dirty }) => (
                     <Form className='ui form' onSubmit={handleSubmit} autoComplete='off'>
                         <MyTextInput name='title' placeholder='Title' />
-                        <FormCheckbox name='isPrivate' checked={activity.isPrivate ? true : false} label='Make my activity private to only my followers' />
+                        <MyCheckboxInput 
+                            name='isPrivate' 
+                            label='Make my activity private to only my followers'
+                            checked={activity.isPrivate}
+                        />
                         <MyTextArea rows={4} placeholder='Description' name='description' />
                         <MySelectInput options={categoryOptions} placeholder='Category' name='category' />
                         <MyDateInput 
