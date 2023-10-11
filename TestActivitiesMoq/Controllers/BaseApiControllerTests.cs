@@ -1,17 +1,12 @@
 ﻿using API.Controllers;
 using Application.Activities;
 using Application.Core;
-using Castle.Core.Internal;
-using Domain;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System.Reflection;
 using System.Security.Claims;
-using static Application.Activities.Create;
 
 namespace TestActivitiesMoq.Controllers
 {
@@ -80,8 +75,6 @@ namespace TestActivitiesMoq.Controllers
                 IsSuccess = true,
                 Value = expectedPagedResult
             };
-
-            var mockResponse = new Mock<HttpResponse>();
 
             //Response null cant add pagination
             var result = _controller.HandlePagedResult(expectedResult);

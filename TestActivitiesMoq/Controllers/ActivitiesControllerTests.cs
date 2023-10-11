@@ -1,7 +1,6 @@
 using API.Controllers;
 using Application.Activities;
 using Application.Core;
-using Autofac.Extras.Moq;
 using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Http.Features;
@@ -10,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System.Security.Claims;
 
-namespace MoqProjectTests.Controllers
+namespace TestActivitiesMoq.Controllers
 {
     public class ActivitiesControllerTests : BaseApiController
     {
@@ -53,10 +52,9 @@ namespace MoqProjectTests.Controllers
         {
             // Arrange
             var mockMediator = new Mock<IMediator>();
-            var controller = new ActivitiesController(mockMediator.Object);
             var id = Guid.NewGuid();
 
-            mockMediator.Setup(m => m.Send(It.IsAny<Details.Query>(), default))
+            mockMediator.Setup(m => m.Send(It.IsAny<Details.Query>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new Result<ActivityDto>
                 {
                     IsSuccess = true,
@@ -64,11 +62,14 @@ namespace MoqProjectTests.Controllers
                 });
 
             // Act
-            var result = await controller.GetActivity(id);
+            var sut = new ActivitiesController(mockMediator.Object);
+            var result = await sut.GetActivity(id);
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnValue = Assert.IsType<ActivityDto>(okResult.Value);
+
+            mockMediator.Verify(x => x.Send(It.IsAny<Details.Query>(), It.IsAny<CancellationToken>()), Times.Once());
 
             Assert.Equal(GetSampleListActivityDto()[0].Title, returnValue.Title);
         }
@@ -78,30 +79,7 @@ namespace MoqProjectTests.Controllers
         {
             // Arrange
             var mockMediator = new Mock<IMediator>();
-            var controller = new ActivitiesController(mockMediator.Object);
-            var activity = new Activity
-            {
-                Id = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14"),
-                Title = "Future Activity 5",
-                Date = DateTime.Parse("2023-10-03T09:18:31.329983Z"),
-                Description = "Activity 5 months in future",
-                Category = "drinks",
-                City = "London",
-                Venue = "Punch and Judy",
-                IsCancelled = false,
-                Attendees = new List<ActivityAttendee>()
-                {
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Jane"},
-                    },
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Bob"},
-                    }
-                },
-                Comments = new List<Comment>(),
-            };
+            var activity = GetSampleActivity();
 
             mockMediator.Setup(m => m.Send(It.IsAny<Create.Command>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Result<Unit>
@@ -111,56 +89,32 @@ namespace MoqProjectTests.Controllers
             });
 
             // Act
-            var result = await controller.CreateActivity(activity);
+            var sut = new ActivitiesController(mockMediator.Object);
+            var result = await sut.CreateActivity(activity);
 
             // Assert
             var unitResult = Assert.IsType<OkObjectResult>(result);
             var returnValue = Assert.IsType<OkObjectResult>(unitResult);
 
-            mockMediator.Verify(x => x.Send(It.IsAny<Create.Command>(), It.IsAny<CancellationToken>()));
+            mockMediator.Verify(x => x.Send(It.IsAny<Create.Command>(), It.IsAny<CancellationToken>()), Times.Exactly(1));
         }
 
         [Fact]
         public async Task EditActivity_ReturnsCorrectResult()
         {
             // Arrange
-            Stream bodyStreamCreate = new MemoryStream();
-
             var mockMediator = new Mock<IMediator>();
-            var controller = new ActivitiesController(mockMediator.Object)
+            var sut = new ActivitiesController(mockMediator.Object)
             {
                 ControllerContext = new ControllerContext
                 {
-                    HttpContext = SetupDefaultContextWithResponseBodyStream(bodyStreamCreate),
+                    HttpContext = SetupDefaultContextWithResponseBodyStream(),
                 }
             };
 
-            var guId = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14");
+            var activity = GetSampleActivity();
 
-            var activity = new Activity
-            {
-                Id = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14"),
-                Title = "Future Activity 5",
-                Date = DateTime.Parse("2023-10-03T09:18:31.329983Z"),
-                Description = "Activity 5 months in future",
-                Category = "drinks",
-                City = "London",
-                Venue = "Punch and Judy",
-                IsCancelled = false,
-                Comments = new List<Comment>(),
-                Attendees = new List<ActivityAttendee>()
-                {
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Jane"},
-                        IsHost = true,
-                    },
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Bob"},
-                    }
-                },
-            };
+            activity.City = "TestCity";
 
             mockMediator.Setup(m => m.Send(It.IsAny<Edit.Command>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Result<Unit>
@@ -170,56 +124,28 @@ namespace MoqProjectTests.Controllers
             });
 
             // Act
-            var result = await controller.EditActivity(guId, activity);
+            var result = await sut.EditActivity(activity.Id, activity);
 
             // Assert
             var unitResult = Assert.IsType<OkObjectResult>(result);
-            var returnValue = Assert.IsType<OkObjectResult>(unitResult);
 
-            mockMediator.Verify(x => x.Send(It.IsAny<Edit.Command>(), It.IsAny<CancellationToken>()));
+            mockMediator.Verify(x => x.Send(It.IsAny<Edit.Command>(), It.IsAny<CancellationToken>()), Times.Once);
         }
 
         [Fact]
         public async Task DeleteActivity_ReturnsCorrectResult()
         {
             // Arrange
-            Stream bodyStreamDelete = new MemoryStream();
-
             var mockMediator = new Mock<IMediator>();
-            var controller = new ActivitiesController(mockMediator.Object)
+            var sut = new ActivitiesController(mockMediator.Object)
             {
                 ControllerContext = new ControllerContext
                 {
-                    HttpContext = SetupDefaultContextWithResponseBodyStream(bodyStreamDelete),
+                    HttpContext = SetupDefaultContextWithResponseBodyStream(),
                 }
             };
 
-            var guId = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14");
-
-            var activity = new Activity
-            {
-                Id = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14"),
-                Title = "Future Activity 5",
-                Date = DateTime.Parse("2023-10-03T09:18:31.329983Z"),
-                Description = "Activity 5 months in future",
-                Category = "drinks",
-                City = "London",
-                Venue = "Punch and Judy",
-                IsCancelled = false,
-                Comments = new List<Comment>(),
-                Attendees = new List<ActivityAttendee>()
-                {
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Jane"},
-                        IsHost = true
-                    },
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Bob"},
-                    }
-                },
-            };
+            var activity = GetSampleActivity();
 
             mockMediator.Setup(m => m.Send(It.IsAny<Delete.Command>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Result<Unit>
@@ -229,7 +155,7 @@ namespace MoqProjectTests.Controllers
             });
 
             // Act
-            var result = await controller.DeleteActivity(guId);
+            var result = await sut.DeleteActivity(activity.Id);
 
             // Assert
             var unitResult = Assert.IsType<OkObjectResult>(result);
@@ -242,44 +168,16 @@ namespace MoqProjectTests.Controllers
         public async Task UpdateActivityAttendee_ReturnsCorrectResult()
         {
             // Arrange
-            Stream bodyStreamUpdateAttendee = new MemoryStream();
-
             var mockMediator = new Mock<IMediator>();
-            var controller = new ActivitiesController(mockMediator.Object)
+            var sut = new ActivitiesController(mockMediator.Object)
             {
                 ControllerContext = new ControllerContext
                 {
-                    HttpContext = SetupDefaultContextWithResponseBodyStream(bodyStreamUpdateAttendee),
+                    HttpContext = SetupDefaultContextWithResponseBodyStream(),
                 }
             };
 
-            var guId = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14");
-
-            var activity = new Activity
-            {
-                Id = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14"),
-                Title = "Future Activity 5",
-                Date = DateTime.Parse("2023-10-03T09:18:31.329983Z"),
-                Description = "Activity 5 months in future",
-                Category = "drinks",
-                City = "London",
-                Venue = "Punch and Judy",
-                IsCancelled = false,
-                Comments = new List<Comment>(),
-                Attendees = new List<ActivityAttendee>()
-                {
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Jane"},
-                        IsHost = true
-                    },
-                    new ActivityAttendee
-                    {
-                        AppUser = new AppUser {UserName = "Bob"},
-                        IsHost = false
-                    }
-                },
-            };
+            var activity = GetSampleActivity();
 
             mockMediator.Setup(m => m.Send(It.IsAny<UpdateAttendence.Command>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new Result<Unit>
@@ -289,7 +187,7 @@ namespace MoqProjectTests.Controllers
             });
 
             // Act
-            var result = await controller.Attend(guId);
+            var result = await sut.Attend(activity.Id);
 
             // Assert
             var unitResult = Assert.IsType<OkObjectResult>(result);
@@ -298,15 +196,15 @@ namespace MoqProjectTests.Controllers
             mockMediator.Verify(x => x.Send(It.IsAny<UpdateAttendence.Command>(), It.IsAny<CancellationToken>()));
         }
 
-        private static DefaultHttpContext SetupDefaultContextWithResponseBodyStream(Stream bodyStream)
+        private static DefaultHttpContext SetupDefaultContextWithResponseBodyStream()
         {
+            Stream bodyStream = new MemoryStream();
             var defaultContext = new DefaultHttpContext()
             {
                 User = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-                {
-                    new Claim(ClaimTypes.Name, "testuser")
-                },
-                "IsActivityHost"))
+                    {
+                        new Claim(ClaimTypes.Name, "testuser")
+                    }, "IsActivityHost"))
             };
 
             var response = new HttpResponseFeature
@@ -323,7 +221,7 @@ namespace MoqProjectTests.Controllers
 
         private static List<ActivityDto> GetSampleListActivityDto()
         {
-            var result = new List<ActivityDto>()
+            return new List<ActivityDto>()
             {
                 new ActivityDto()
                 {
@@ -358,12 +256,38 @@ namespace MoqProjectTests.Controllers
                             Following = false,
                             FollowersCount = 0,
                             FollowingCount = 1
-                        },
+                        }
                     }
                 }
             };
+        }
 
-            return result;
+        private static Activity GetSampleActivity()
+        {
+            return new Activity
+            {
+                Id = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14"),
+                Title = "Future Activity 5",
+                Date = DateTime.Parse("2023-10-03T09:18:31.329983Z"),
+                Description = "Activity 5 months in future",
+                Category = "drinks",
+                City = "London",
+                Venue = "Punch and Judy",
+                IsCancelled = false,
+                Comments = new List<Comment>(),
+                Attendees = new List<ActivityAttendee>()
+                {
+                    new ActivityAttendee
+                    {
+                        AppUser = new AppUser { UserName = "Jane" },
+                        IsHost = true
+                    },
+                    new ActivityAttendee
+                    {
+                        AppUser = new AppUser { UserName = "Bob" }
+                    }
+                }
+            };
         }
     }
 }

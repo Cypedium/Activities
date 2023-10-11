@@ -38,7 +38,9 @@ namespace API.Controllers
         public async Task<IActionResult> EditActivity(Guid id, Activity activity)
         {
             activity.Id = id;
-            return HandleResult(await _mediator.Send(new Edit.Command { Activity = activity }));
+            var command = new Edit.Command { Activity = activity };
+            var responseMediator = _mediator.Send(command);
+            return HandleResult(await responseMediator);
         }
 
         [Authorize(Policy = "IsActivityHost")]
