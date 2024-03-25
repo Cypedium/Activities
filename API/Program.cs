@@ -2,6 +2,7 @@ using API.Extensions;
 using API.Middleware;
 using API.SingnalR;
 using Domain;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -10,6 +11,8 @@ using Newtonsoft.Json.Linq;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);  //runs a castol server
+
+ConfigureService(builder.Services);
 
 // Add services to the container for new logic
 
@@ -92,3 +95,8 @@ catch (Exception ex)
 }
 
 app.Run();
+
+void ConfigureService(IServiceCollection services)
+{
+    services.AddTransient<IMediator, Mediator>();
+}
