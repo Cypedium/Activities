@@ -47,8 +47,6 @@ namespace TestActivitiesMoq.Controllers
         [Fact]
         public void HandleResult_ReturnsOk_WhenResultIsSuccessAndValueIsNotNull()
         {
-
-
             var items = GetSampleListActivityDto();
 
             var expectedResult = new Result<ActivityDto>() { IsSuccess = true,

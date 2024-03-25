@@ -204,7 +204,8 @@ namespace TestActivitiesMoq.Controllers
                 User = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
                     {
                         new Claim(ClaimTypes.Name, "testuser")
-                    }, "IsActivityHost"))
+                    }, "IsActivityHost")), 
+                //Session = new CacheProfile() { Duration = 5 }
             };
 
             var response = new HttpResponseFeature
