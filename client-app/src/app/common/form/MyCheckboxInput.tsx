@@ -1,6 +1,6 @@
 import { useField } from 'formik';
 import React from 'react';
-import { Form, FormCheckbox, Label, /*Select?*/ } from 'semantic-ui-react';
+import { Form, FormCheckbox, Label, Select } from 'semantic-ui-react';
 
 interface Props {
     name: string;
