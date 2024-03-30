@@ -56,7 +56,7 @@ namespace Persistence
                             }
                         }
                     },
-                    new Activity
+                    /* new Activity
                     {
                         Title = "Past Activity 2",
                         Date = DateTime.UtcNow.AddMonths(-1),
@@ -248,7 +248,7 @@ namespace Persistence
                                 IsHost = false                            
                             },
                         }
-                    }
+                    } */
                 };
 
                 await context.Activities.AddRangeAsync(activities);

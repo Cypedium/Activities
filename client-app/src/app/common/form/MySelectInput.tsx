@@ -1,5 +1,4 @@
 import { useField } from 'formik';
-import React from 'react';
 import { Form, Label, Select } from 'semantic-ui-react';
 
 interface Props {
@@ -20,7 +19,7 @@ export default function MySelectInput(props: Props) {
              value={field.value || null}
              onChange={(event, data) => helpers.setValue(data.value)}
              onBlur={() => helpers.setTouched(true)}
-             placeholder={props.placeholder}   
+             placeholder={props.placeholder}
            />
             {meta.touched && meta.error ? (
                 <Label basic color='red'>{meta.error}</Label>

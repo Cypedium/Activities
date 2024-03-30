@@ -31,7 +31,7 @@ export interface Activity {
     description: string = '';
     category: string = '';
     city: string = '';
-    venue: string = '';    
+    venue: string = '';
 
     constructor(activity?: ActivityFormValues) {
       if (activity) {
