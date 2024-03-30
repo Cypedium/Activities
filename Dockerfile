@@ -9,6 +9,7 @@ COPY "Application/Application.csproj" "Application/Application.csproj"
 COPY "Persistence/Persistence.csproj" "Persistence/Persistence.csproj"
 COPY "Domain/Domain.csproj" "Domain/Domain.csproj"
 COPY "Infrastructure/Infrastructure.csproj" "Infrastructure/Infrastructure.csproj"
+COPY "TestActivitiesMoq/TestActivitiesMoq.csproj" "TestActivitiesMoq/TestActivitiesMoq.csproj" 
 
 RUN dotnet restore "Reactivities.sln"
 

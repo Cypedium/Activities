@@ -50,7 +50,8 @@ TestResult.xml
 nunit-*.xml
 
 # XUnit
-TestActivitiesMoq\
+TestActivitiesMoq/
+MoqProjectTests/
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
