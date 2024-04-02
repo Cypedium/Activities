@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
-import { Button, Container, Header, Image, Segment } from "semantic-ui-react";
+import { Button, Container, Header, /*Need new Image,*/ Segment } from "semantic-ui-react";
 import { useStore } from "../../app/stores/store";
 import LoginForm from "../users/LoginForm";
 import RegisterForm from "../users/RegisterForm";
@@ -11,8 +11,8 @@ export default observer(function HomePage() {
         <Segment inverted textAlign="center" vertical className="masthead">
             <Container text>
                 <Header as='h1' inverted>
-                    <Image size="massive" src='/assets/logo.png' alt='logo' style={{ marginBottom: 12 }} />
-                    Reactivities
+                    {/* <Image size="massive" src='/assets/logo.png' alt='logo' style={{ marginBottom: 12 }} /> */}
+                    Activities
                 </Header>
                 {userStore.isLoggedIn ? (
                     <>

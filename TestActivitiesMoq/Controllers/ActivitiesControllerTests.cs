@@ -204,7 +204,7 @@ namespace TestActivitiesMoq.Controllers
                 User = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
                     {
                         new Claim(ClaimTypes.Name, "testuser")
-                    }, "IsActivityHost")), 
+                    }, "IsActivityHost")),
                 //Session = new CacheProfile() { Duration = 5 }
             };
 
@@ -227,7 +227,7 @@ namespace TestActivitiesMoq.Controllers
                 new ActivityDto()
                 {
                     Id = Guid.Parse("27906324-5442-4afc-9b9e-bf1a831e5b14"),
-                    isPrivate = false,
+                    IsPrivate = false,
                     Title = "Future Activity 5",
                     Date = DateTime.Parse("2023-10-03T09:18:31.329983Z"),
                     Description = "Activity 5 months in future",
