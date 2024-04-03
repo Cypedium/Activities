@@ -1,9 +1,9 @@
 import { observer } from 'mobx-react-lite';
-import { Segment, Grid, Icon } from 'semantic-ui-react'
+import { Segment, Grid, Icon, /*FormCheckbox*/ } from 'semantic-ui-react';
 import { Activity } from "../../../app/models/activity";
 import { Birds } from "./Birds";
 import { format } from 'date-fns';
-//import MyCheckboxInput from '../../../app/common/form/MyCheckboxInput';
+//import { useField } from 'formik';
 
 interface Props {
     activity: Activity,
@@ -11,13 +11,21 @@ interface Props {
 }
 
 export default observer(function ActivityDetailedInfo({ activity }: Props) {
+    //const [helpers] = useField(typeof Birds);
     const birdsList = Birds.map((bird, index) => {
         return (
             <div key={index}>
-                <p><strong>{bird.text}</strong> - {bird.value}</p>
+                <p> {index} {". "}
+                    {bird.text.includes("SWE") ?
+                        <div>
+                            {bird.value}{"."}
+                        </div>
+                         : null}
+                </p>
             </div>
         );
     });
+
     return (
         <Segment.Group>
             <Segment attached='top'>
@@ -58,12 +66,9 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                         <Icon name='marker' size='large' color='teal' />
                     </Grid.Column>
                     <Grid.Column width={11}>
-                        {(activity.category.startsWith("Bird") ||
-                            activity.category.startsWith("bird")) ?
-                            <span>
-                                {birdsList}
-                            </span> : null
-                        }
+                        {(activity.category.match("Birds") ?
+                            (birdsList) : null
+                        )}
                     </Grid.Column>
                 </Grid>
             </Segment>
