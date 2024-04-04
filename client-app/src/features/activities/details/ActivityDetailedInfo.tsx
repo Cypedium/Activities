@@ -1,9 +1,8 @@
 import { observer } from 'mobx-react-lite';
-import { Segment, Grid, Icon, /*FormCheckbox*/ } from 'semantic-ui-react';
+import { Segment, Grid, Icon } from 'semantic-ui-react';
 import { Activity } from "../../../app/models/activity";
 import { Birds } from "./Birds";
 import { format } from 'date-fns';
-//import { useField } from 'formik';
 
 interface Props {
     activity: Activity,
@@ -11,20 +10,15 @@ interface Props {
 }
 
 export default observer(function ActivityDetailedInfo({ activity }: Props) {
-    //const [helpers] = useField(typeof Birds);
     const birdsList = Birds.map((bird, index) => {
         return (
             <div key={index}>
-                <p> {index} {". "}
-                    {bird.text.includes("SWE") ?
-                        <div>
-                            {bird.value}{"."}
-                        </div>
-                         : null}
-                </p>
+                <p><span>{bird.value} {"O"}</span></p>
             </div>
         );
     });
+
+    const HEADER_DETAILED_INFO = 'Birds to catch';
 
     return (
         <Segment.Group>
@@ -66,9 +60,14 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                         <Icon name='marker' size='large' color='teal' />
                     </Grid.Column>
                     <Grid.Column width={11}>
-                        {(activity.category.match("Birds") ?
-                            (birdsList) : null
-                        )}
+                        {activity.category.startsWith("bird") ?
+                            <>
+                                <div><strong>{HEADER_DETAILED_INFO}</strong></div>
+                                <span>
+                                    {birdsList}
+                                </span>
+                            </> : null
+                        }
                     </Grid.Column>
                 </Grid>
             </Segment>
