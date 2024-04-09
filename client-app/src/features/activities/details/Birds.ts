@@ -1,10 +1,10 @@
 export const Birds = [
-    { text: 'SWE', value: 'Koltrast' },
-    //{ text: 'ENG', value: 'Common Blackbird' },
-    { text: 'SWE', value: 'Blåmes' },
-    //{ text: 'ENG', value: 'Eurasian Blue Tit' },
-    { text: 'SWE', value: 'Fiskmås' }
-    //{ text: 'ENG', value: 'European Herring Gull' }
+    { text: 'SWE', value: 'Koltrast', checked: false },
+    { text: 'ENG', value: 'Common Blackbird', checked: false },
+    { text: 'SWE', value: 'Blåmes', checked: false },
+    { text: 'ENG', value: 'Eurasian Blue Tit', checked: false },
+    { text: 'SWE', value: 'Fiskmås', checked: false },
+    { text: 'ENG', value: 'European Herring Gull', checked: false }
     // {
     //     "species_swedish": "Blåmes",
     //     "species_english": "Eurasian Blue Tit"

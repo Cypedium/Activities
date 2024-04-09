@@ -11,9 +11,25 @@ interface Props {
 
 export default observer(function ActivityDetailedInfo({ activity }: Props) {
     const birdsList = Birds.map((bird, index) => {
+        function handleCheckboxChange(checked: boolean): void {
+            checked = !checked;
+        }
+
         return (
             <div key={index}>
-                <p><span>{bird.value} {"O"}</span></p>
+                {bird.text.startsWith("SWE") ? (
+                    <p>
+                        <span>
+                            {bird.value}
+                            <input
+                                style={{ marginLeft: 10}}
+                                type="checkbox"
+                                checked={bird.checked}
+                                onChange={() => handleCheckboxChange(bird.checked)}
+                            />
+                        </span>
+                    </p>
+                ) : null}
             </div>
         );
     });
