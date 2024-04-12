@@ -3,6 +3,7 @@ import { Segment, Grid, Icon } from 'semantic-ui-react';
 import { Activity } from "../../../app/models/activity";
 import { Birds } from "./Birds";
 import { format } from 'date-fns';
+import { useEffect, useState } from 'react';
 
 interface Props {
     activity: Activity,
@@ -10,11 +11,13 @@ interface Props {
 }
 
 export default observer(function ActivityDetailedInfo({ activity }: Props) {
-    const birdsList = Birds.map((bird, index) => {
-        function handleCheckboxChange(checked: boolean): void {
-            checked = !checked;
-        }
+    const [checked, setChecked] = useState(true);
 
+    useEffect(() => {
+        console.log("Checkbox state changed", checked);
+    }, [checked]);
+
+    const birdsList = Birds.map((bird, index) => {
         return (
             <div key={index}>
                 {bird.text.startsWith("SWE") ? (
@@ -22,11 +25,12 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                         <span>
                             {bird.value}
                             <input
-                                style={{ marginLeft: 10}}
-                                type="checkbox"
+                                id={bird.id.toString()}
+                                type='checkbox'
                                 checked={bird.checked}
-                                onChange={() => handleCheckboxChange(bird.checked)}
-                            />
+                                onChange={() => setChecked(checked => !checked)}
+                                onClick={() => bird.checked = !bird.checked}
+                            ></input>
                         </span>
                     </p>
                 ) : null}
@@ -90,4 +94,3 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
         </Segment.Group>
     )
 })
-

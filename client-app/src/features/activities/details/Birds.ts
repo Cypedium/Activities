@@ -1,96 +1,52 @@
 export const Birds = [
-    { text: 'SWE', value: 'Koltrast', checked: false },
-    { text: 'ENG', value: 'Common Blackbird', checked: false },
-    { text: 'SWE', value: 'Blåmes', checked: false },
-    { text: 'ENG', value: 'Eurasian Blue Tit', checked: false },
-    { text: 'SWE', value: 'Fiskmås', checked: false },
-    { text: 'ENG', value: 'European Herring Gull', checked: false }
-    // {
-    //     "species_swedish": "Blåmes",
-    //     "species_english": "Eurasian Blue Tit"
-    // },
-    // {
-    //     "species_swedish": "Bofink",
-    //     "species_english": "Common Chaffinch"
-    // },
-    // {
-    //     "species_swedish": "Fiskmås",
-    //     "species_english": "European Herring Gull"
-    // },
-    // {
-    //     "species_swedish": "Grönfink",
-    //     "species_english": "European Greenfinch"
-    // },
-    // {
-    //     "species_swedish": "Gråsparv",
-    //     "species_english": "House Sparrow"
-    // },
-    // {
-    //     "species_swedish": "Gråhakedopping",
-    //     "species_english": "Red-necked Grebe"
-    // },
-    // {
-    //     "species_swedish": "Gulsparv",
-    //     "species_english": "Yellowhammer"
-    // },
-    // {
-    //     "species_swedish": "Järnsparv",
-    //     "species_english": "Snow Bunting"
-    // },
-    // {
-    //     "species_swedish": "Kaja",
-    //     "species_english": "Western Jackdaw"
-    // },
-    // {
-    //     "species_swedish": "Koltrast",
-    //     "species_english": "Common Blackbird"
-    // },
-    // {
-    //     "species_swedish": "Lappmes",
-    //     "species_english": "Siberian Jay"
-    // },
-    // {
-    //     "species_swedish": "Prärielärka",
-    //     "species_english": "Horned Lark"
-    // },
-    // {
-    //     "species_swedish": "Ringduva",
-    //     "species_english": "Common Wood Pigeon"
-    // },
-    // {
-    //     "species_swedish": "Rödhake",
-    //     "species_english": "European Robin"
-    // },
-    // {
-    //     "species_swedish": "Sävsparv",
-    //     "species_english": "Reed Bunting"
-    // },
-    // {
-    //     "species_swedish": "Skata",
-    //     "species_english": "Eurasian Magpie"
-    // },
-    // {
-    //     "species_swedish": "Sånglärka",
-    //     "species_english": "Eurasian Skylark"
-    // },
-    // {
-    //     "species_swedish": "Svartvit flugsnappare",
-    //     "species_english": "Pied Flycatcher"
-    // },
-    // {
-    //     "species_swedish": "Talgoxe",
-    //     "species_english": "Great Tit"
-    // },
-    // {
-    //     "species_swedish": "Tofsvipa",
-    //     "species_english": "Northern Lapwing"
-    // },
-    // {
-    //     "species_swedish": "Tornseglare",
-    //     "species_english": "Common Swift"
-    // },
-    // {
-    //     "species_swedish": "Trädpiplärka",
-    //     "species_english": "Tree Pipit"
-    // }
+    { id: 1, text: 'SWE', value: 'Koltrast', checked: true },
+    { id: 2, text: 'ENG', value: 'Common Blackbird', checked: false },
+    { id: 3, text: 'SWE', value: 'Blåmes', checked: false },
+    { id: 4, text: 'ENG', value: 'Eurasian Blue Tit', checked: false },
+    { id: 5, text: 'SWE', value: 'Fiskmås', checked: false },
+    { id: 6, text: 'ENG', value: 'European Herring Gull', checked: false },
+    { id: 7, text: 'SWE', value: 'Blåmes', checked: false },
+    { id: 8, text: 'ENG', value: 'Eurasian Blue Tit', checked: false },
+    { id: 9, text: 'SWE', value: 'Bofink', checked: false },
+    { id: 10, text: 'ENG', value: 'Common Chaffinch', checked: false },
+    { id: 11, text: 'SWE', value: 'Fiskmås', checked: false },
+    { id: 12, text: 'ENG', value: 'European Herring Gull', checked: false },
+    { id: 13, text: 'SWE', value: 'Grönfink', checked: false },
+    { id: 14, text: 'ENG', value: 'European Greenfinch', checked: false },
+    { id: 15, text: 'SWE', value: 'Gråsparv', checked: false },
+    { id: 16, text: 'ENG', value: 'House Sparrow', checked: false },
+    { id: 17, text: 'SWE', value: 'Gråhakedopping', checked: false },
+    { id: 18, text: 'ENG', value: 'Red-necked Grebe', checked: false },
+    { id: 19, text: 'SWE', value: 'Gulsparv', checked: false },
+    { id: 20, text: 'ENG', value: 'Yellowhammer', checked: false },
+    { id: 21, text: 'SWE', value: 'Järnsparv', checked: false },
+    { id: 22, text: 'ENG', value: 'Snow Bunting', checked: false },
+    { id: 23, text: 'SWE', value: 'Kaja', checked: false },
+    { id: 24, text: 'ENG', value: 'Western Jackdaw', checked: false },
+    { id: 25, text: 'SWE', value: 'Koltrast', checked: false },
+    { id: 26, text: 'ENG', value: 'Common Blackbird', checked: false },
+    { id: 27, text: 'SWE', value: 'Lappmes', checked: false },
+    { id: 28, text: 'ENG', value: 'Siberian Jay', checked: false },
+    { id: 29, text: 'SWE', value: 'Prärielärka', checked: false },
+    { id: 30, text: 'ENG', value: 'Horned Lark', checked: false },
+    { id: 31, text: 'SWE', value: 'Ringduva', checked: false },
+    { id: 32, text: 'ENG', value: 'Common Wood Pigeon', checked: false },
+    { id: 33, text: 'SWE', value: 'Rödhake', checked: false },
+    { id: 34, text: 'ENG', value: 'European Robin', checked: false },
+    { id: 35, text: 'SWE', value: 'Sävsparv', checked: false },
+    { id: 36, text: 'ENG', value: 'Reed Bunting', checked: false },
+    { id: 37, text: 'SWE', value: 'Skata', checked: false },
+    { id: 38, text: 'ENG', value: 'Eurasian Magpie', checked: false },
+    { id: 39, text: 'SWE', value: 'Sånglärka', checked: false },
+    { id: 40, text: 'ENG', value: 'Eurasian Skylark', checked: false },
+    { id: 41, text: 'SWE', value: 'Svartvit flugsnappare', checked: false },
+    { id: 42, text: 'ENG', value: 'Pied Flycatcher', checked: false },
+    { id: 43, text: 'SWE', value: 'Talgoxe', checked: false },
+    { id: 44, text: 'ENG', value: 'Great Tit', checked: false },
+    { id: 45, text: 'SWE', value: 'Tofsvipa', checked: false },
+    { id: 46, text: 'ENG', value: 'Northern Lapwing', checked: false },
+    { id: 47, text: 'SWE', value: 'Tornseglare', checked: false },
+    { id: 48, text: 'ENG', value: 'Common Swift', checked: false },
+    { id: 49, text: 'SWE', value: 'Trädpiplärka', checked: false },
+    { id: 50, text: 'ENG', value: 'Tree Pipit', checked: false }
 ]
