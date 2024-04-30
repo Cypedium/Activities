@@ -40,8 +40,7 @@ namespace Persistence
 
                 var activities = new List<Activity>
                 {
-                    new Activity
-                    {
+                    new() {
                         Title = "Past Activity 1",
                         Date = DateTime.UtcNow.AddMonths(-2),
                         Description = "Activity 2 months ago",

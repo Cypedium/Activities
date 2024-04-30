@@ -14,12 +14,12 @@ namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services, 
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services,
             IConfiguration config)
         {
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();  
+            services.AddSwaggerGen();
             services.AddDbContext<DataContext>(options =>
             {
                 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -36,7 +36,7 @@ namespace API.Extensions
                 else
                 {
                     // Use connection string provided at runtime by Flyio.
-                    var connUrl = Environment.GetEnvironmentVariable("DATABASE_URL");            
+                    var connUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
                     // Parse connection URL to connection string for Npgsql
                     connUrl = connUrl.Replace("postgres://", string.Empty);
@@ -65,8 +65,19 @@ namespace API.Extensions
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials()
-                    .WithOrigins("http://localhost:3000");
+                    .WithOrigins("http://localhost:3000", "https://w.wiki/9mgx");
 
+                });
+            });
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("OnlyGetAndPostPolicy", // A catchy policy name...
+                    builder =>
+                {
+                    // Only requests from , "https://w.wiki/9mgx"
+                    builder.WithOrigins("https://w.wiki/9mgx")
+                        .WithMethods("GET", "POST")
+                        .AllowAnyHeader();
                 });
             });
             services.AddMediatR(typeof(List.Handler));

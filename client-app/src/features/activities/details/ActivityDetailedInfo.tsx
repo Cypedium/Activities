@@ -4,6 +4,7 @@ import { Activity } from "../../../app/models/activity";
 import { Birds } from "./Birds";
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 interface Props {
     activity: Activity,
@@ -12,10 +13,26 @@ interface Props {
 
 export default observer(function ActivityDetailedInfo({ activity }: Props) {
     const [checked, setChecked] = useState(true);
+    const [wikibirds, setWikibirds] = useState([]);
 
     useEffect(() => {
         console.log("Checkbox state changed", checked);
     }, [checked]);
+
+    useEffect(() => {
+        // Fetching bird data
+        axios.get(newFunction())
+            .then(response => {
+                setWikibirds(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching bird data from url:', error);
+            });
+
+        function newFunction(): string {
+            return "https://sv.wikipedia.org/wiki/Lista_%C3%B6ver_f%C3%A5gelarter_observerade_i_Sverige_(taxonomisk)";
+        }
+    }, []);
 
     const birdsList = Birds.map((bird, index) => {
         return (
@@ -23,7 +40,6 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                 {bird.text.startsWith("SWE") ? (
                     <p>
                         <span>
-                            {bird.value}
                             <input
                                 id={bird.id.toString()}
                                 type='checkbox'
@@ -31,9 +47,12 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                                 onChange={() => setChecked(checked => !checked)}
                                 onClick={() => bird.checked = !bird.checked}
                             ></input>
+                            {"   "}
+                            {bird.value}
                         </span>
                     </p>
                 ) : null}
+
             </div>
         );
     });
@@ -77,15 +96,16 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
             <Segment attached>
                 <Grid verticalAlign='middle'>
                     <Grid.Column width={1}>
-                        <Icon name='marker' size='large' color='teal' />
+                        {/* <Icon name='marker' size='large' color='teal' /> */}
                     </Grid.Column>
                     <Grid.Column width={11}>
                         {activity.category.startsWith("bird") ?
                             <>
-                                <div><strong>{HEADER_DETAILED_INFO}</strong></div>
+                                <div><h1>{HEADER_DETAILED_INFO}</h1></div>
                                 <span>
-                                    {birdsList}
+                                    {birdsList.sort((a, b) => (a.key ? a.key : 0) > (b.key ? b.key : 0) ? 1 : -1)}
                                 </span>
+                                <div>{wikibirds}</div>
                             </> : null
                         }
                     </Grid.Column>
