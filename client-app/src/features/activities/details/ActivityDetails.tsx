@@ -8,6 +8,7 @@ import ActivityDetailedChat from './ActivityDetailedChat';
 import ActivityDetailedHeader from './ActivityDetailedHeader';
 import ActivityDetailedInfo from './ActivityDetailedInfo';
 import ActivityDetailedSiderbar from './ActivityDetailedSidebar';
+import { Birds } from './Birds';
 
 export default observer(function ActvitiyDetails() {
 
@@ -26,7 +27,7 @@ export default observer(function ActvitiyDetails() {
         <Grid>
             <Grid.Column width={10}>
                 <ActivityDetailedHeader activity={activity} />
-                <ActivityDetailedInfo activity={activity} />
+                <ActivityDetailedInfo activity={activity} birds={Birds} />
                 <ActivityDetailedChat activityId={activity.id} />
             </Grid.Column>
             <Grid.Column width={6}>

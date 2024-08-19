@@ -52,7 +52,7 @@ export default observer(function ActivityForm() {
         <Segment clearing>
             <Header content='Activity Details' sub color='teal' />
             <Formik
-                validationSchema={validationSchema}
+                validationSchema={validationSchema} 
                 enableReinitialize 
                 initialValues={activity} 
                 onSubmit={values => handleFormSubmit(values)}>
@@ -64,8 +64,12 @@ export default observer(function ActivityForm() {
                             label='Make my activity private to only my followers'
                             checked={activity.isPrivate}
                         />
-                        <MyTextArea rows={4} placeholder='Description' name='description' />
-                        <MySelectInput options={categoryOptions} placeholder='Category' name='category' />
+                        <MyTextArea
+                            rows={4}
+                            placeholder='Description' name='description' />
+                        <MySelectInput 
+                            options={categoryOptions}
+                            placeholder='Category' name='category' />
                         <MyDateInput 
                             placeholderText='Date'
                             name='date'
