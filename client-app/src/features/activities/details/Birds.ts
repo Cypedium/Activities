@@ -53,5 +53,6 @@ export const Birds = [
     { id: 52, text: 'SWE', value: 'Kungsörn', checked: false, category: 'ROVFAGLAR' },
     { id: 53, text: 'SWE', value: 'Trana', checked: false, category: null },
     { id: 54, text: 'SWE', value: 'Svan', checked: false, category: null },
-    { id: 55, text: 'SWE', value: 'Sädesärla', checked: false, category: null }
+    { id: 55, text: 'SWE', value: 'Sädesärla', checked: false, category: null },
+    { id: 56, text: 'SWE', value: 'Forsärla', checked: false, category: null }
 ]
