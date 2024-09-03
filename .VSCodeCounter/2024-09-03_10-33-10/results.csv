@@ -1,0 +1,165 @@
+"filename", "language", "XML", "C#", "Docker", "JSON with Comments", "TypeScript", "TypeScript JSX", "CSS", "Markdown", "JSON", "Properties", "HTML", "JavaScript", "Ignore", "YAML", "comment", "blank", "total"
+"c:\Users\deltagare\aurellab\Activities\.dockerignore", "Ignore", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2
+"c:\Users\deltagare\aurellab\Activities\.github\workflows\docker-push.yml", "YAML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 0, 1, 37
+"c:\Users\deltagare\aurellab\Activities\API\AIM\ChatGtp4.cs", "C#", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 18
+"c:\Users\deltagare\aurellab\Activities\API\API.csproj", "XML", 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 35
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\AccountController.cs", "C#", 0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 96
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\ActivitiesController.cs", "C#", 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 57
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\BaseApiController.cs", "C#", 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 41
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\BuggyController.cs", "C#", 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 33
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\FallbackController.cs", "C#", 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\FollowController.cs", "C#", 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 28
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\PhotosController.cs", "C#", 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 26
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\ProfilesController.cs", "C#", 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 27
+"c:\Users\deltagare\aurellab\Activities\API\Controllers\WeatherForecastController.cs", "C#", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 33
+"c:\Users\deltagare\aurellab\Activities\API\DTOs\LoginDto.cs", "C#", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"c:\Users\deltagare\aurellab\Activities\API\DTOs\RegisterDto.cs", "C#", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 18
+"c:\Users\deltagare\aurellab\Activities\API\DTOs\UserDto.cs", "C#", 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+"c:\Users\deltagare\aurellab\Activities\API\Extensions\ApplicationServiceExtensions.cs", "C#", 0, 79, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 8, 96
+"c:\Users\deltagare\aurellab\Activities\API\Extensions\HttpExtensions.cs", "C#", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 21
+"c:\Users\deltagare\aurellab\Activities\API\Extensions\IdentityServiceExtensions.cs", "C#", 0, 59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 64
+"c:\Users\deltagare\aurellab\Activities\API\Middleware\ExceptionMiddleware.cs", "C#", 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 44
+"c:\Users\deltagare\aurellab\Activities\API\Program.cs", "C#", 0, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 16, 102
+"c:\Users\deltagare\aurellab\Activities\API\Properties\launchSettings.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 1, 15
+"c:\Users\deltagare\aurellab\Activities\API\Services\TokenService.cs", "C#", 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 43
+"c:\Users\deltagare\aurellab\Activities\API\SingnalR\ChatHub.cs", "C#", 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 34
+"c:\Users\deltagare\aurellab\Activities\API\WeatherForecast.cs", "C#", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 13
+"c:\Users\deltagare\aurellab\Activities\API\appsettings.Development.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 12
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\asset-manifest.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 31
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\manifest.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 1, 26
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\static\css\main.af6f7dc4.css", "CSS", 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 325, 1, 373
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\static\js\787.13e3e0c6.chunk.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 2
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\static\js\main.bfd3df91.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 3
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\static\media\brand-icons.6729d29753e000c17489.svg", "XML", 1004, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 1009
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\static\media\icons.62d9dae4e0040e81c980.svg", "XML", 1514, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 1519
+"c:\Users\deltagare\aurellab\Activities\API\wwwroot\static\media\outline-icons.9c4845b4b41ef40a22fa.svg", "XML", 362, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 367
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\ActivityDto.cs", "C#", 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 21
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\ActivityParams.cs", "C#", 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\ActivityValidator.cs", "C#", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 18
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\AttendeeDto.cs", "C#", 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\Create.cs", "C#", 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 61
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\Delete.cs", "C#", 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 40
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\Details.cs", "C#", 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 41
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\Edit.cs", "C#", 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 52
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\List.cs", "C#", 0, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 56
+"c:\Users\deltagare\aurellab\Activities\Application\Activities\UpdateAttendence.cs", "C#", 0, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 71
+"c:\Users\deltagare\aurellab\Activities\Application\Application.csproj", "XML", 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 23
+"c:\Users\deltagare\aurellab\Activities\Application\Comments\CommentDto.cs", "C#", 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12
+"c:\Users\deltagare\aurellab\Activities\Application\Comments\Create.cs", "C#", 0, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 68
+"c:\Users\deltagare\aurellab\Activities\Application\Comments\List.cs", "C#", 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 39
+"c:\Users\deltagare\aurellab\Activities\Application\Core\AppException.cs", "C#", 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 16
+"c:\Users\deltagare\aurellab\Activities\Application\Core\MappingProfiles.cs", "C#", 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 48
+"c:\Users\deltagare\aurellab\Activities\Application\Core\PagedList.cs", "C#", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 30
+"c:\Users\deltagare\aurellab\Activities\Application\Core\PagingParams.cs", "C#", 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\deltagare\aurellab\Activities\Application\Core\Result.cs", "C#", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12
+"c:\Users\deltagare\aurellab\Activities\Application\Followers\FollowToggle.cs", "C#", 0, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 63
+"c:\Users\deltagare\aurellab\Activities\Application\Followers\List.cs", "C#", 0, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 57
+"c:\Users\deltagare\aurellab\Activities\Application\Interfaces\IPhotoAccessor.cs", "C#", 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\deltagare\aurellab\Activities\Application\Interfaces\IUserAccessor.cs", "C#", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"c:\Users\deltagare\aurellab\Activities\Application\Photos\Add.cs", "C#", 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 60
+"c:\Users\deltagare\aurellab\Activities\Application\Photos\Delete.cs", "C#", 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 57
+"c:\Users\deltagare\aurellab\Activities\Application\Photos\PhotoUploadResult.cs", "C#", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"c:\Users\deltagare\aurellab\Activities\Application\Photos\SetMain.cs", "C#", 0, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 52
+"c:\Users\deltagare\aurellab\Activities\Application\Profiles\ActivitiesList.cs", "C#", 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 52
+"c:\Users\deltagare\aurellab\Activities\Application\Profiles\Details.cs", "C#", 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 43
+"c:\Users\deltagare\aurellab\Activities\Application\Profiles\Edit.cs", "C#", 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 52
+"c:\Users\deltagare\aurellab\Activities\Application\Profiles\Profile.cs", "C#", 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 16
+"c:\Users\deltagare\aurellab\Activities\Application\Profiles\UserActivityDto.cs", "C#", 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\deltagare\aurellab\Activities\Dockerfile", "Docker", 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 26
+"c:\Users\deltagare\aurellab\Activities\Domain\Activity.cs", "C#", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17
+"c:\Users\deltagare\aurellab\Activities\Domain\ActivityAttendee.cs", "C#", 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13
+"c:\Users\deltagare\aurellab\Activities\Domain\AppUser.cs", "C#", 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"c:\Users\deltagare\aurellab\Activities\Domain\Comment.cs", "C#", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11
+"c:\Users\deltagare\aurellab\Activities\Domain\Domain.csproj", "XML", 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 16
+"c:\Users\deltagare\aurellab\Activities\Domain\Photo.cs", "C#", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9
+"c:\Users\deltagare\aurellab\Activities\Domain\UserFollowing.cs", "C#", 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+"c:\Users\deltagare\aurellab\Activities\Infrastructure\Infrastructure.csproj", "XML", 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 20
+"c:\Users\deltagare\aurellab\Activities\Infrastructure\Photos\CloudinarySettings.cs", "C#", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9
+"c:\Users\deltagare\aurellab\Activities\Infrastructure\Photos\PhotoAccessor.cs", "C#", 0, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 59
+"c:\Users\deltagare\aurellab\Activities\Infrastructure\Security\IsHostRequirement.cs", "C#", 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 46
+"c:\Users\deltagare\aurellab\Activities\Infrastructure\Security\UserAccessor.cs", "C#", 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 25
+"c:\Users\deltagare\aurellab\Activities\Persistence\DataContext.cs", "C#", 0, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 56
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20230502133159_BuggfixDataContext.Designer.cs", "C#", 0, 347, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 129, 478
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20230502133159_BuggfixDataContext.cs", "C#", 0, 338, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 38, 379
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20230508085145_PrivateActivity.Designer.cs", "C#", 0, 351, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 131, 484
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20230508085145_PrivateActivity.cs", "C#", 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 41
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20230508093912_PrivateActivityVer2.Designer.cs", "C#", 0, 351, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 131, 484
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20230508093912_PrivateActivityVer2.cs", "C#", 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 39
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20240330082757_UnitTestNewCategory.Designer.cs", "C#", 0, 351, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 131, 484
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\20240330082757_UnitTestNewCategory.cs", "C#", 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 23
+"c:\Users\deltagare\aurellab\Activities\Persistence\Migrations\DataContextModelSnapshot.cs", "C#", 0, 349, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 131, 481
+"c:\Users\deltagare\aurellab\Activities\Persistence\Persistence.csproj", "XML", 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 20
+"c:\Users\deltagare\aurellab\Activities\Persistence\Seed.cs", "C#", 0, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 259
+"c:\Users\deltagare\aurellab\Activities\client-app\.env", "Properties", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\deltagare\aurellab\Activities\client-app\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 21, 47
+"c:\Users\deltagare\aurellab\Activities\client-app\package-lock.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 17754, 0, 0, 0, 0, 0, 0, 1, 17755
+"c:\Users\deltagare\aurellab\Activities\client-app\package.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 69, 0, 0, 0, 0, 0, 0, 1, 70
+"c:\Users\deltagare\aurellab\Activities\client-app\public\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 23, 1, 44
+"c:\Users\deltagare\aurellab\Activities\client-app\public\manifest.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 1, 26
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\api\agent.ts", "TypeScript", 0, 0, 0, 0, 107, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 118
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\form\MyCheckboxInput.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 28
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\form\MyDateInput.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 21
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\form\MySelectInput.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 29
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\form\MyTextArea.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 22
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\form\MyTextInput.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\imageUpload\PhotoUploadWidget.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 55
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\imageUpload\PhotoWidgetCropper.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\imageUpload\PhotoWidgetDropzone.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 40
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\modals\modalContainer.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\common\options\categoryOptions.ts", "TypeScript", 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\layout\App.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 44
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\layout\LoadingComponent.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\layout\NavBar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 33
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\layout\styles.css", "CSS", 0, 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 0, 1, 8, 46
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\models\activity.ts", "TypeScript", 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 48
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\models\comment.ts", "TypeScript", 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\models\pagination.ts", "TypeScript", 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 26
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\models\profile.ts", "TypeScript", 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 33
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\models\serverError.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\models\user.ts", "TypeScript", 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\router\RequireAuth.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 13
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\router\Routes.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 32
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\activityStore.ts", "TypeScript", 0, 0, 0, 0, 232, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 21, 254
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\commentStore.ts", "TypeScript", 0, 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 61
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\commonStore.ts", "TypeScript", 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 35
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\modalStore.ts", "TypeScript", 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 27
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\profileStore.ts", "TypeScript", 0, 0, 0, 0, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 193
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\store.ts", "TypeScript", 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31
+"c:\Users\deltagare\aurellab\Activities\client-app\src\app\stores\userStore.ts", "TypeScript", 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 69
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\dashboard\ActivityDashboard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 56
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\dashboard\ActivityFilters.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 36
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\dashboard\ActivityList.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\dashboard\ActivityListItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 68
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\dashboard\ActivityListItemAttendee.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 43
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\dashboard\ActivityListItemPlaceholder.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 35
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\details\ActivityDetailedChat.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 87, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 91
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\details\ActivityDetailedHeader.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 86, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 91
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\details\ActivityDetailedInfo.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 105, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9, 116
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\details\ActivityDetailedSidebar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 53
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\details\ActivityDetails.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 38
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\details\Birds.ts", "TypeScript", 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\activities\form\ActivityForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 97
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\errors\NotFound.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 18
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\errors\ServerError.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 19
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\errors\TestError.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 50
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\errors\ValidationError.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\home\HomePage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 38
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\FollowButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 45
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfileAbout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 36
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfileCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 31
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfileContent.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 34
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfileFollowings.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 30
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfileFormEdit.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 49
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfileHeader.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 35
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfilePage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 33
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfilePhotos.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 76, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 82
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\profiles\ProfilesActivities.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 65
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\users\LoginForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 29
+"c:\Users\deltagare\aurellab\Activities\client-app\src\features\users\RegisterForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 42
+"c:\Users\deltagare\aurellab\Activities\client-app\src\index.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 26
+"c:\Users\deltagare\aurellab\Activities\client-app\src\react-app-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"c:\Users\deltagare\aurellab\Activities\client-app\src\reportWebVitals.ts", "TypeScript", 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"c:\Users\deltagare\aurellab\Activities\client-app\src\setupTests.ts", "TypeScript", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 6
+"c:\Users\deltagare\aurellab\Activities\client-app\tsconfig.json", "JSON with Comments", 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 27
+"Total", "-", 2965, 4289, 18, 26, 882, 1667, 84, 26, 17930, 1, 21, 2, 2, 36, 444, 1336, 29729
