@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json.Linq;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);  //runs a castol server
@@ -54,9 +53,11 @@ else
         context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
         await next.Invoke();
     });
+
 }
 
 app.UseCors("CorsPolicy");
+app.UseCors("Access-Control-Allow-Origin");
 
 app.UseAuthentication();
 app.UseAuthorization();
