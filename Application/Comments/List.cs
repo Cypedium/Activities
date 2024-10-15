@@ -30,7 +30,7 @@ namespace Application.Comments
                     .Where(x => x.Activity.Id == request.ActivityId)
                     .OrderByDescending(x => x.CreatedAt)
                     .ProjectTo<CommentDto>(_mapper.ConfigurationProvider)
-                    .ToListAsync();
+                    .ToListAsync(cancellationToken: cancellationToken);
 
                 return Result<List<CommentDto>>.Success(comments);
             }

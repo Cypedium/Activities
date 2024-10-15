@@ -43,7 +43,7 @@ namespace Application.Profiles
                 };
                 
 
-                var activities = await query.ToListAsync();
+                var activities = await query.ToListAsync(cancellationToken: cancellationToken);
 
                 return Result<List<UserActivityDto>>.Success(activities);
             }

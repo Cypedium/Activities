@@ -31,7 +31,7 @@ namespace Application.Photos
             public async Task<Result<Photo>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var user = await _context.Users.Include(p => p.Photos)
-                    .FirstOrDefaultAsync(x => x.UserName == _userAccessor.GetUsername());
+                    .FirstOrDefaultAsync(x => x.UserName == _userAccessor.GetUsername(), cancellationToken: cancellationToken);
 
                 if (user == null) return null;
 
@@ -47,7 +47,7 @@ namespace Application.Photos
 
                 user.Photos.Add(photo);
 
-                var result = await _context.SaveChangesAsync() > 0;
+                var result = await _context.SaveChangesAsync(cancellationToken) > 0;
 
                 if (result) return Result<Photo>.Success(photo);
 

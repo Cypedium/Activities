@@ -35,13 +35,12 @@ namespace Application.Profiles
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var user = await _context.Users.FirstOrDefaultAsync(x => 
-                    x.UserName == _userAccessor.GetUsername());
-                
-                user.Bio = request.Bio ?? user.Bio;
-                user.DisplayName = request.DisplayName ?? user.DisplayName;
+                var user = await _context.Users.FirstOrDefaultAsync(
+                    x => x.UserName == _userAccessor.GetUsername(), cancellationToken: cancellationToken);  
+                    user.Bio = request.Bio ?? user.Bio;
+                    user.DisplayName = request.DisplayName ?? user.DisplayName;
 
-                var success = await _context.SaveChangesAsync() > 0;
+                var success = await _context.SaveChangesAsync(cancellationToken) > 0;
 
                 if (success) return Result<Unit>.Success(Unit.Value);
 

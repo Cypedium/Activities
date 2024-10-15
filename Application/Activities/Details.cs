@@ -32,7 +32,7 @@ namespace Application.Activities
                 var activity = await _context.Activities
                 .ProjectTo<ActivityDto>(_mapper.ConfigurationProvider, 
                     new {currentUsername = _userAccessor.GetUsername()})
-                .FirstOrDefaultAsync(x => x.Id == request.Id);
+                .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken: cancellationToken);
                 
                 return Result<ActivityDto>.Success(activity);
             }
