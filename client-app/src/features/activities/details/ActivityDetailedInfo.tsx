@@ -7,8 +7,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 interface Props {
-    activity: Activity,
-    birds: typeof Birds,
+    activity: Activity
 }
 
 export default observer(function ActivityDetailedInfo({ activity }: Props) {
