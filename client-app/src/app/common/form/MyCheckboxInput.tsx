@@ -15,7 +15,7 @@ export default function MyCheckboxInput(props: Props) {
            <FormCheckbox
              clearable
              value={field.value || null}
-             onChange={(event, data) => helpers.setValue(data.value)}
+             onChange={(_e, data) => helpers.setValue(data.value)}
              onBlur={() => helpers.setTouched(true)}
              label={props.label}
              checked={props.checked}   

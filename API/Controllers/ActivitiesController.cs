@@ -41,16 +41,6 @@ namespace API.Controllers
         {
             activity.Id = id;
             return HandleResult(await _mediator.Send(new Edit.Command { Activity = activity, }));
-           /*  var user = await DbContext.Users.FirstOrDefaultAsync(
-                    x => x.UserName == _userAccessor.GetUsername(), cancellationToken: cancellationToken);  
-                    user.Bio = request.Bio ?? user.Bio;
-                    user.DisplayName = request.DisplayName ?? user.DisplayName;
-
-                var success = await _context.SaveChangesAsync(cancellationToken) > 0;
-
-                if (success) return Result<Unit>.Success(Unit.Value);
-
-                return Result<Unit>.Failure("Problem updating profile"); */
         }
 
         [Authorize(Policy = "IsActivityHost")]

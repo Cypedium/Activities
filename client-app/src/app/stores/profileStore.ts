@@ -30,7 +30,7 @@ export default class ProfileStore {
         )
     }
 
-    setActiveTab = (activeTab: any) => this.activeTab = activeTab;
+    setActiveTab = (activeTab: number) => this.activeTab = activeTab;
 
     get isCurrentUser() {
         if (store.userStore.user && this.profile) {
