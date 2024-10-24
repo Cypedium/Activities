@@ -2,6 +2,7 @@ import { Profile } from "./profile";
 
 export interface IActivity {
     id: string;
+    isPrivate?: boolean;
     title: string;
     date: Date | null;
     description: string;
@@ -10,7 +11,6 @@ export interface IActivity {
     venue: string;
     hostUsername?: string;
     isCancelled?: boolean;
-    isPrivate?: boolean;
     isGoing?: boolean;
     isHost?: boolean;
     host?: Profile;
@@ -29,6 +29,7 @@ export interface IActivity {
     }
 
     id: string;
+    isPrivate?: boolean;
     title: string;
     date: Date | null;
     description: string;
@@ -39,14 +40,13 @@ export interface IActivity {
     isCancelled?: boolean;
     isGoing?: boolean;
     isHost?: boolean;
-    isPrivate?: boolean;
     host?: Profile;
     attendees: Profile[] = [];
   }
 
   export class ActivityFormValues {
     id?: string = undefined;
-    isPrivate: boolean = false;
+    isPrivate?: boolean = false;
     title: string = '';
     date: Date | null = null;
     description: string = '';

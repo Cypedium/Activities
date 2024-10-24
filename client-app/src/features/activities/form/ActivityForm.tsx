@@ -62,7 +62,7 @@ export default observer(function ActivityForm() {
                         <MyCheckboxInput 
                             name='isPrivate' 
                             label='Make my activity private to only my followers'
-                            checked={activity.isPrivate}
+                            checked={activity.isPrivate as unknown as boolean}
                         />
                         <MyTextArea
                             rows={4}

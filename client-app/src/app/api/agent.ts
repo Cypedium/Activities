@@ -6,7 +6,6 @@ import { router } from '../router/Routes';
 import { store } from '../stores/store';
 import { Photo, Profile, UserActivity } from '../models/profile';
 import { PaginatedResult } from '../models/pagination';
-import { object } from 'yup';
 
 const sleep = (delay: number) => {
     return new Promise((resolve) => {
