@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
+// Test
 var builder = WebApplication.CreateBuilder(args);  //runs a castol server
 
 ConfigureService(builder.Services);
