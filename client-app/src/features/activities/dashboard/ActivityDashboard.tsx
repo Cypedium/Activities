@@ -28,7 +28,7 @@ export default observer(function ActivityDashboard() {
 
     return (
         <Grid>
-            <Grid.Column width='10'>
+            <Grid.Column width='15'>
               {activityStore.loadingInitial && !loadingNext ? (
                   <>
                       <ActivityListItemPlaceholder />  
@@ -45,7 +45,7 @@ export default observer(function ActivityDashboard() {
                 </InfiniteScroll>
               )}
             </Grid.Column>
-            <Grid.Column width='6'>
+            <Grid.Column width='1'>
               <ActivityFilters />
             </Grid.Column>
             <Grid.Column width={10}>
