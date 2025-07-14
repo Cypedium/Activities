@@ -8,9 +8,10 @@ import axios from 'axios';
 
 interface Props {
     activity: Activity
+    birds: typeof Birds
 }
 
-export default observer(function ActivityDetailedInfo({ activity }: Props) {
+export default observer(function ActivityDetailedInfo({ activity, birds }: Props) {
     const [checked, setChecked] = useState(true);
     const [wikibirds, setWikibirds] = useState([]);
 
